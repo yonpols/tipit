@@ -13,6 +13,14 @@ Completed:
 * [x] Optional: Using locale-specific currency and currency thousands separators.
 * [x] Optional: Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
+### Video Walkthrough
 ![Video Walkthrough](TipIt.gif)
 
 Produced with [LiceCap](http://www.cockos.com/licecap/)
+
+### Notes
+This application was developed using XCode 7 and with constraints. It should work on both portrait and
+landscape mode as well as on iPhone and iPad.
+
+### Open Source Libraries
+ - [FontAwesome](http://fontawesome.io/)
