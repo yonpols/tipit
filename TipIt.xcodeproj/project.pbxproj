@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD45491F1BBBA8AB00F32C92 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45491E1BBBA8AB00F32C92 /* SettingsTableViewController.m */; };
+		CD87A8151BB78B6D0015450C /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD87A8141BB78B6D0015450C /* fontawesome-webfont.ttf */; };
+		CDCF88331BBCA3C700CB1DB4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = CDCF88311BBCA3C700CB1DB4 /* README.md */; };
+		CDCF88341BBCA3C700CB1DB4 /* TipIt.gif in Resources */ = {isa = PBXBuildFile; fileRef = CDCF88321BBCA3C700CB1DB4 /* TipIt.gif */; };
 		CDE11D891BB72C9B0058738E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE11D881BB72C9B0058738E /* main.m */; };
 		CDE11D8C1BB72C9B0058738E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE11D8B1BB72C9B0058738E /* AppDelegate.m */; };
 		CDE11D8F1BB72C9B0058738E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE11D8E1BB72C9B0058738E /* ViewController.m */; };
@@ -35,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD45491D1BBBA8AB00F32C92 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		CD45491E1BBBA8AB00F32C92 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		CD87A8141BB78B6D0015450C /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		CDCF88311BBCA3C700CB1DB4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CDCF88321BBCA3C700CB1DB4 /* TipIt.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = TipIt.gif; sourceTree = "<group>"; };
 		CDE11D841BB72C9B0058738E /* TipIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE11D881BB72C9B0058738E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CDE11D8A1BB72C9B0058738E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +94,8 @@
 				CDE11DA01BB72C9B0058738E /* TipItTests */,
 				CDE11DAB1BB72C9B0058738E /* TipItUITests */,
 				CDE11D851BB72C9B0058738E /* Products */,
+				CDCF88311BBCA3C700CB1DB4 /* README.md */,
+				CDCF88321BBCA3C700CB1DB4 /* TipIt.gif */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +121,8 @@
 				CDE11D951BB72C9B0058738E /* LaunchScreen.storyboard */,
 				CDE11D981BB72C9B0058738E /* Info.plist */,
 				CDE11D871BB72C9B0058738E /* Supporting Files */,
+				CD45491D1BBBA8AB00F32C92 /* SettingsTableViewController.h */,
+				CD45491E1BBBA8AB00F32C92 /* SettingsTableViewController.m */,
 			);
 			path = TipIt;
 			sourceTree = "<group>";
@@ -117,6 +130,7 @@
 		CDE11D871BB72C9B0058738E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CD87A8141BB78B6D0015450C /* fontawesome-webfont.ttf */,
 				CDE11D881BB72C9B0058738E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -207,6 +221,7 @@
 				TargetAttributes = {
 					CDE11D831BB72C9B0058738E = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = W7M53HHVM3;
 					};
 					CDE11D9C1BB72C9B0058738E = {
 						CreatedOnToolsVersion = 7.0;
@@ -243,7 +258,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDCF88341BBCA3C700CB1DB4 /* TipIt.gif in Resources */,
 				CDE11D971BB72C9B0058738E /* LaunchScreen.storyboard in Resources */,
+				CD87A8151BB78B6D0015450C /* fontawesome-webfont.ttf in Resources */,
 				CDE11D941BB72C9B0058738E /* Assets.xcassets in Resources */,
 				CDE11D921BB72C9B0058738E /* Main.storyboard in Resources */,
 			);
@@ -270,7 +287,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD45491F1BBBA8AB00F32C92 /* SettingsTableViewController.m in Sources */,
 				CDE11D8F1BB72C9B0058738E /* ViewController.m in Sources */,
+				CDCF88331BBCA3C700CB1DB4 /* README.md in Sources */,
 				CDE11D8C1BB72C9B0058738E /* AppDelegate.m in Sources */,
 				CDE11D891BB72C9B0058738E /* main.m in Sources */,
 			);
@@ -411,10 +430,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TipIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.TipIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -422,10 +445,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TipIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.TipIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -496,6 +523,7 @@
 				CDE11DB31BB72C9B0058738E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDE11DB41BB72C9B0058738E /* Build configuration list for PBXNativeTarget "TipItTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +532,7 @@
 				CDE11DB61BB72C9B0058738E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDE11DB71BB72C9B0058738E /* Build configuration list for PBXNativeTarget "TipItUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +541,7 @@
 				CDE11DB91BB72C9B0058738E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
