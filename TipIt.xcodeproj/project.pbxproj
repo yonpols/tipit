@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		CD45491F1BBBA8AB00F32C92 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45491E1BBBA8AB00F32C92 /* SettingsTableViewController.m */; };
 		CD87A8151BB78B6D0015450C /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD87A8141BB78B6D0015450C /* fontawesome-webfont.ttf */; };
-		CDCF88331BBCA3C700CB1DB4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = CDCF88311BBCA3C700CB1DB4 /* README.md */; };
 		CDCF88341BBCA3C700CB1DB4 /* TipIt.gif in Resources */ = {isa = PBXBuildFile; fileRef = CDCF88321BBCA3C700CB1DB4 /* TipIt.gif */; };
+		CDCF88351BBCA59400CB1DB4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CDCF88311BBCA3C700CB1DB4 /* README.md */; };
 		CDE11D891BB72C9B0058738E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE11D881BB72C9B0058738E /* main.m */; };
 		CDE11D8C1BB72C9B0058738E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE11D8B1BB72C9B0058738E /* AppDelegate.m */; };
 		CDE11D8F1BB72C9B0058738E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE11D8E1BB72C9B0058738E /* ViewController.m */; };
@@ -263,6 +263,7 @@
 				CD87A8151BB78B6D0015450C /* fontawesome-webfont.ttf in Resources */,
 				CDE11D941BB72C9B0058738E /* Assets.xcassets in Resources */,
 				CDE11D921BB72C9B0058738E /* Main.storyboard in Resources */,
+				CDCF88351BBCA59400CB1DB4 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +290,6 @@
 			files = (
 				CD45491F1BBBA8AB00F32C92 /* SettingsTableViewController.m in Sources */,
 				CDE11D8F1BB72C9B0058738E /* ViewController.m in Sources */,
-				CDCF88331BBCA3C700CB1DB4 /* README.md in Sources */,
 				CDE11D8C1BB72C9B0058738E /* AppDelegate.m in Sources */,
 				CDE11D891BB72C9B0058738E /* main.m in Sources */,
 			);

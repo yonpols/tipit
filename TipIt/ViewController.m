@@ -18,35 +18,20 @@
 
 @property (weak, nonatomic) IBOutlet UIView *partySizeView;
 @property (weak, nonatomic) IBOutlet UILabel *partySizeLabel;
-@property (nonatomic) int partySize;
-@property (nonatomic) int maxPartySize;
-@property (nonatomic) int panStartingPoint;
-@property (nonatomic) NSArray *tipPercentages;
 
 @property (weak, nonatomic) IBOutlet UILabel *tipValueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalValueLabel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *settingsBtn;
 
+@property (nonatomic) int partySize;
+@property (nonatomic) int maxPartySize;
+@property (nonatomic) int panStartingPoint;
+@property (nonatomic) NSArray *tipPercentages;
 
 - (IBAction)billValueChanged:(id)sender;
 - (IBAction)tipSelectionChanged:(id)sender;
-
 - (IBAction)handlePartySizeTap:(UIGestureRecognizer *)sender;
 - (IBAction)handlePartySizePan:(UIPanGestureRecognizer *)sender;
-
-- (IBAction)handleSettingsTap:(id)sender;
-
-
-//- (void) updateValues;
-//- (IBAction)billEditingDidEnd:(id)sender;
-//- (IBAction)tipSelectorChanged:(id)sender;
-//- (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string;
-//
-//- (float)billValue;
-//
-
-- (float)parseLocaleValue:(NSString *) value;
-- (NSString *)formatValue:(float) value;
 @end
 
 
@@ -117,57 +102,9 @@
     [settings synchronize];
 }
 
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)hideTipView:(BOOL) animated {
-    [UIView animateWithDuration:(animated ? 0.4 : 0) animations:^{
-        self.billFieldHeightConstraint.constant = 200;
-        self.tipView.alpha = 0;
-    } completion:^(BOOL finished) {
-    }];
-}
-
-- (void)showTipView:(BOOL) animated {
-    [UIView animateWithDuration:(animated ? 0.4 : 0) animations:^{
-        self.billFieldHeightConstraint.constant = 80;
-        self.tipView.alpha = 1;
-    } completion:^(BOOL finished) {
-    }];
-}
-
-- (void) updatePartySizeLabel:(int)partySize {
-    self.partySize = partySize;
-    self.partySizeLabel.text = [@"" stringByPaddingToLength:(partySize * 2) withString:@"\uf007 " startingAtIndex:0];
-    
-    [self updateValues];
-}
-
-- (float)parseLocaleValue:(NSString*) value {
-    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-    formatter.numberStyle = NSNumberFormatterCurrencyStyle;
-    NSNumber *number = [formatter numberFromString:value];
-    return [number floatValue];
-}
-
-- (NSString *)formatValue:(float) value {
-    return [NSNumberFormatter localizedStringFromNumber:@(value) numberStyle:NSNumberFormatterCurrencyStyle];
-}
-
-- (void) updateValues {
-    float billValue = [self parseLocaleValue:self.billTextField.text];
-    float tipPercentage = [self.tipPercentages[self.tipSelector.selectedSegmentIndex] floatValue] / 100;
-    float tip = billValue * tipPercentage;
-    float total = billValue + tip;
-    float yourTip = tip / self.partySize;
-    float yourTotal = total / self.partySize;
-    
-    self.tipValueLabel.text = [self formatValue:yourTip];
-    self.totalValueLabel.text = [self formatValue:yourTotal];
 }
 
 - (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string {
@@ -227,8 +164,50 @@
     }
 }
 
-- (IBAction)handleSettingsTap:(id)sender {
-    [self performSegueWithIdentifier:@"showSettings" sender:self];
+- (void)hideTipView:(BOOL) animated {
+    [UIView animateWithDuration:(animated ? 0.4 : 0) animations:^{
+        self.billFieldHeightConstraint.constant = 200;
+        self.tipView.alpha = 0;
+    } completion:^(BOOL finished) {
+    }];
+}
+
+- (void)showTipView:(BOOL) animated {
+    [UIView animateWithDuration:(animated ? 0.4 : 0) animations:^{
+        self.billFieldHeightConstraint.constant = 80;
+        self.tipView.alpha = 1;
+    } completion:^(BOOL finished) {
+    }];
+}
+
+- (void) updatePartySizeLabel:(int)partySize {
+    self.partySize = partySize;
+    self.partySizeLabel.text = [@"" stringByPaddingToLength:(partySize * 2) withString:@"\uf007 " startingAtIndex:0];
+    
+    [self updateValues];
+}
+
+- (float)parseLocaleValue:(NSString*) value {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.numberStyle = NSNumberFormatterCurrencyStyle;
+    NSNumber *number = [formatter numberFromString:value];
+    return [number floatValue];
+}
+
+- (NSString *)formatValue:(float) value {
+    return [NSNumberFormatter localizedStringFromNumber:@(value) numberStyle:NSNumberFormatterCurrencyStyle];
+}
+
+- (void) updateValues {
+    float billValue = [self parseLocaleValue:self.billTextField.text];
+    float tipPercentage = [self.tipPercentages[self.tipSelector.selectedSegmentIndex] floatValue] / 100;
+    float tip = billValue * tipPercentage;
+    float total = billValue + tip;
+    float yourTip = tip / self.partySize;
+    float yourTotal = total / self.partySize;
+    
+    self.tipValueLabel.text = [self formatValue:yourTip];
+    self.totalValueLabel.text = [self formatValue:yourTotal];
 }
 
 @end

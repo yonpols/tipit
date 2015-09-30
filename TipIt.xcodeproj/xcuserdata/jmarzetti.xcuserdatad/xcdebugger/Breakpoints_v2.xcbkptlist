@@ -9,14 +9,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TipIt/ViewController.m"
-            timestampString = "464994881.875963"
+            filePath = "TipIt/UITextFieldMask.m"
+            timestampString = "465327508.585906"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "@implementation ViewController"
-            landmarkType = "3">
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "@interface UITextFieldMask()"
+            landmarkType = "2">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
